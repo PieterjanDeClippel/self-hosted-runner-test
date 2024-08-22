@@ -1,6 +1,15 @@
 name: simple
 on:
   workflow_dispatch:
+    inputs:
+      version:
+        type: string
+        description: Version
+      environment:
+        type: choice
+        options:
+          - Development
+          - Production
 jobs:
   build:
     runs-on:
