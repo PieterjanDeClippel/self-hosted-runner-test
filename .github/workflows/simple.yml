@@ -1,0 +1,14 @@
+name: simple
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on:
+      - self-hosted
+      - my-own-runner # label
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          echo Hello world
+          sleep 15
+          echo Goodbye
